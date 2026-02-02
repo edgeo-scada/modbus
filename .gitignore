@@ -1,5 +1,6 @@
 # Binaries
-/modbuscli
+/bin/
+/edgeo-modbus
 *.exe
 *.dll
 *.so

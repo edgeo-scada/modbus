@@ -29,9 +29,9 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "modbuscli",
+	Use:   "edgeo-modbus",
 	Short: "A comprehensive Modbus TCP client CLI",
-	Long: `modbuscli is a powerful command-line interface for interacting with Modbus TCP devices.
+	Long: `edgeo-modbus is a powerful command-line interface for interacting with Modbus TCP devices.
 
 Features:
   - Read/write coils and registers
@@ -43,19 +43,19 @@ Features:
 
 Examples:
   # Read 10 holding registers from address 0
-  modbuscli read hr -a 0 -c 10 -H 192.168.1.100
+  edgeo-modbus read hr -a 0 -c 10 -H 192.168.1.100
 
   # Write value 1234 to register 100
-  modbuscli write register -a 100 -v 1234 -H 192.168.1.100
+  edgeo-modbus write register -a 100 -v 1234 -H 192.168.1.100
 
   # Scan for Modbus devices
-  modbuscli scan -H 192.168.1.100
+  edgeo-modbus scan -H 192.168.1.100
 
   # Interactive mode
-  modbuscli interactive -H 192.168.1.100
+  edgeo-modbus interactive -H 192.168.1.100
 
   # Watch registers continuously
-  modbuscli watch hr -a 0 -c 5 -i 1s -H 192.168.1.100`,
+  edgeo-modbus watch hr -a 0 -c 5 -i 1s -H 192.168.1.100`,
 	Version: version,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		// Setup logger
@@ -73,7 +73,7 @@ func init() {
 	cobra.OnInitialize(initConfig)
 
 	// Configuration file
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default: $HOME/.modbuscli.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default: $HOME/.edgeo-modbus.yaml)")
 
 	// Connection flags
 	rootCmd.PersistentFlags().StringVarP(&host, "host", "H", "localhost", "Modbus server host")
@@ -120,7 +120,7 @@ func initConfig() {
 
 		viper.AddConfigPath(home)
 		viper.AddConfigPath(".")
-		viper.SetConfigName(".modbuscli")
+		viper.SetConfigName(".edgeo-modbus")
 		viper.SetConfigType("yaml")
 	}
 
