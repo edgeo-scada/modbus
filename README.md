@@ -28,13 +28,13 @@ A comprehensive Modbus TCP client library and CLI tool written in Go.
 ### CLI Tool
 
 ```bash
-go install github.com/edgeo/drivers/cmd/modbuscli@latest
+go install github.com/edgeo-scada/modbus-tcp/cmd/edgeo-modbus@latest
 ```
 
 ### Library
 
 ```bash
-go get github.com/edgeo/drivers/modbus
+go get github.com/edgeo-scada/modbus-tcp/modbus
 ```
 
 ## Quick Start
@@ -81,7 +81,7 @@ import (
     "log"
     "time"
 
-    "github.com/edgeo/drivers/modbus"
+    "github.com/edgeo-scada/modbus-tcp/modbus"
 )
 
 func main() {
@@ -342,8 +342,8 @@ word-order: big
 
 ```bash
 # Clone the repository
-git clone https://github.com/edgeo/drivers.git
-cd drivers
+git clone https://github.com/edgeo-scada/modbus-tcp.git
+cd modbus-tcp
 
 # Build the CLI
 go build -o modbuscli ./cmd/modbuscli

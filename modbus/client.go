@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/edgeo/drivers/modbus/internal/transport"
+	"github.com/edgeo-scada/modbus-tcp/modbus/internal/transport"
 )
 
 // Client is a Modbus TCP client with support for automatic reconnection.

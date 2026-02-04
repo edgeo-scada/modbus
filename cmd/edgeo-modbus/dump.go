@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/edgeo/drivers/modbus"
+	"github.com/edgeo-scada/modbus-tcp/modbus"
 	"github.com/spf13/cobra"
 )
 

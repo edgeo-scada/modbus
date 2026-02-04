@@ -9,7 +9,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/edgeo/drivers/modbus"
+	"github.com/edgeo-scada/modbus-tcp/modbus"
 )
 
 func main() {

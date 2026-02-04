@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/edgeo/drivers/modbus"
+	"github.com/edgeo-scada/modbus-tcp/modbus"
 )
 
 func main() {
